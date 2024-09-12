@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "f8e66013-2b41-4fd3-842a-68eb64fd6fb5",
+		"name": "Pedidos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38261805"
+	},
+	"item": [
+		{
+			"name": "Ordenes",
+			"item": [
+				{
+					"name": "Read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/ordenes"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fecha_orden\": \"2024-09-12\",\r\n  \"fecha_solicita\": \"2024-09-11\",\r\n  \"estado\": \"A\",\r\n  \"tipo_orden\": {\r\n    \"id\":1\r\n    },\r\n  \"forma_pago\":  {\r\n    \"id\":1\r\n    },\r\n  \"almacenes\":  {\r\n    \"id\":1\r\n    },\r\n  \"proveedores\":  {\r\n    \"id\":1\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/ordenes"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n  \"fecha_orden\": \"2024-09-03\",\r\n  \"fecha_solicita\": \"2024-09-11\",\r\n  \"estado\": \"A\",\r\n  \"tipo_orden\": {\r\n    \"id\":1\r\n    },\r\n  \"forma_pago\":  {\r\n    \"id\":1\r\n    },\r\n  \"almacenes\":  {\r\n    \"id\":1\r\n    },\r\n  \"proveedores\":  {\r\n    \"id\":1\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/ordenes/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/ordenes/1"
+					},
+					"response": []
+				},
+				{
+					"name": "ReadID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/ordenes/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tipo_orden",
+			"item": [
+				{
+					"name": "Read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/tipo_orden"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"descripcion\": \"Compra\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/tipo_orden"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"descripcion\": \"Venta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/tipo_orden/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/tipo_orden/1"
+					},
+					"response": []
+				},
+				{
+					"name": "ReadID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/tipo_orden/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Forma_pago",
+			"item": [
+				{
+					"name": "Read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/forma_pago"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre_pago\": \"Transferencia Bancaria\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/forma_pago"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"nombre_pago\": \"Yape\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/forma_pago/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/forma_pago/1"
+					},
+					"response": []
+				},
+				{
+					"name": "ReadID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/forma_pago/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Proveedores",
+			"item": [
+				{
+					"name": "Read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/proveedores"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ruc\": \"123456789012345678901234\",\r\n  \"razon_social\": \"Proveedor S.A.\",\r\n  \"contacto\": \"Juan Pérez\",\r\n  \"telefono\": \"987654321\",\r\n  \"estado\": \"A\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/proveedores"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"ruc\": \"123456789012345678901237\",\r\n    \"razon_social\": \"Proveedor S.A.\",\r\n    \"contacto\": \"Juan Pérez\",\r\n    \"telefono\": \"987654321\",\r\n    \"estado\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/proveedores/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/proveedores/1"
+					},
+					"response": []
+				},
+				{
+					"name": "ReadID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/proveedores/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Almacenes",
+			"item": [
+				{
+					"name": "Read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/almacenes"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Almacén Central\",\r\n  \"direccion\": \"Av. Siempre Viva 123\",\r\n  \"telefono\": \"123456789\",\r\n  \"estado\": \"A\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/almacenes"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Almacén Central\",\r\n    \"direccion\": \"Av. Siempre Viva 123\",\r\n    \"telefono\": \"123456788\",\r\n    \"estado\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/almacenes/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/almacenes/1"
+					},
+					"response": []
+				},
+				{
+					"name": "ReadID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/almacenes/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
